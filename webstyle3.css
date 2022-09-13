@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.banner {
+    background: linear-gradient(rgba(255, 197, 207, 0.842), rgba(113, 178, 252, 0.596)), url(https://thumbs.dreamstime.com/b/birthday-cake-decorated-colorful-sprinkles-ten-candles-colorful-birthday-cake-sprinkles-ten-candles-blue-142412983.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar {
+    padding: 16px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar img {
+    width: 8em;
+    height: 8em;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background: rgb(87, 202, 255);
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    /* margin-top: 20px; */
+    font-size: 71px;
+}
+
+.content p {
+    /* line-height: 10px; */
+    margin: 10px auto;
+    font-size: 26px;
+}
+
+button{
+    width: 100px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px 10px;
+    border-radius: 25px;
+    border: 2px solid rgb(0, 212, 250);
+    color: rgb(255, 255, 255);
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}
+
+span{
+    background: rgb(255, 149, 167);
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index:-1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
